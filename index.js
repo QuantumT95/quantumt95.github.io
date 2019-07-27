@@ -28,6 +28,17 @@ $(function () {
     });
 });
 
+$(function () {
+    $('#imoImg').click(function (e) {
+        if ($(this).attr("src") === "./images/immowow.png")
+            $(this).attr("src", "./images/immowow1.png");
+        else if ($(this).attr("src") === "./images/immowow1.png")
+            $(this).attr("src", "./images/immowow2.png");
+        else if ($(this).attr("src") === "./images/immowow2.png")
+            $(this).attr("src", "./images/immowow.png");
+    });
+});
+
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () { scrollFunction() };
 
