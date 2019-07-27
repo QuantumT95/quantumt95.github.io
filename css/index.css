@@ -28,7 +28,7 @@ div {
 }
 
 #text {
-    color: navajowhite;
+    color:#212529;
 }
 
 #myBtn {
@@ -55,11 +55,14 @@ div {
     width: 150px;
     height: 44px;
     border-radius: 8px;
-    border: 2px solid red;
     font-family: Avenir-Heavy;
     font-size: 15px;
-    color: red;
-    background-color: transparent;
+    color: white;
+    background-color: red;
     background-image: initial;
     text-shadow: initial;
+  }
+
+  .info-link {
+      color: black;
   }
