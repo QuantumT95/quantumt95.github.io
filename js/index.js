@@ -1,3 +1,5 @@
+new WOW().init();
+
 $(function () {
     $('#sytImg').click(function (e) {
         if ($(this).attr("src") === "./images/SYT1.png")
