@@ -27,10 +27,6 @@ div {
     padding-left: 15px;
 }
 
-#sytImg, #bfImg, #vgImg, #imoImg{
-    cursor: pointer;
-}
-
 #text {
     color: dimgray;
 }
