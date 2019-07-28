@@ -27,7 +27,7 @@ div {
     padding-left: 15px;
 }
 
-#textDesc {
+.textDesc {
     color:#212529;
 }
 
@@ -51,7 +51,7 @@ div {
     background-color: #555; /* Add a dark-grey background on hover */
   }
 
-  #githubButton {
+  .githubButton {
     width: 150px;
     height: 44px;
     border-radius: 8px;
