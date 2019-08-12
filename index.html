@@ -27,7 +27,7 @@
   <div id='stars2'></div>
   <div id='stars3'></div> -->
 
-  <div class="container" style="height: calc(100vh + 53px); color: #fbfbff; text-align: center;">
+  <div class="container" id="home" style="height: calc(100vh + 53px); color: #fbfbff; text-align: center;">
     <div class="jumbotron wow bounceInDown" data-wow-delay="1.2s"" style=" background-color: transparent;">
       <br>
       <br>
@@ -53,10 +53,22 @@
     </div>
   </div>
 
+  <!-- nav bar  -->
+
+  <nav id='nav_bar'>
+    <ul class='nav_links'>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+    </ul>
+  </nav>
+
+
   <div class="fluid-container">
     <!--About Me-->
-    <div class="jumbotron wow bounceInLeft" data-wow-delay="1.2s"" style=" background-color: #fbfbff; height: 101vh;
-      display: flex;flex-direction: column;justify-content: space-evenly; color: #0c120c; margin-bottom: 0px;">
+    <div class="jumbotron wow bounceInLeft" data-wow-delay="1.2s" id="about"
+      style=" background-color: #fbfbff; height: 101vh;
+      display: flex;flex-direction: column;justify-content: space-evenly; color: #0c120c; margin-bottom: 0px; border-radius: 0 !important;">
       <div class="container">
         <!-- Cards -->
         <div class="row" style="display: flex; justify-content: space-evenly;">
@@ -134,52 +146,10 @@
         </div>
       </div>
     </div>
-    <!-- <div class="container">
-        <div class="row">
-          <div class="col">
-            <h1 class="display-4"
-              style="text-align: center; outline: 5px solid grey;background-color: #717B80;padding-top: 1.5vh;">
-              Charlie Tran</h1>
-            <p class="lead" style="text-align: center">Developer</p>
-            <div class="contact-icons" style="display: flex; justify-content: space-evenly;">
-              <a href="mailto:tran.charlie@ymail.com" class="info-link">
-                <i class="far fa-envelope fa-3x"></i>
-              </a>
-              <a href="https://twitter.com/Quantum_T95" class="info-link" target="_blank">
-                <i class="fab fa-twitter-square fa-3x"></i>
-              </a>
-              <a href="https://github.com/QuantumT95" class="info-link" target="_blank">
-                <i class="fab fa-github-square fa-3x"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/charlie-tran-7bb038b4/" class="info-link" target="_blank">
-                <i class="fab fa-linkedin fa-3x"></i>
-              </a>
-            </div>
-          </div>
-          <div class="col" style="
-          display: flex;
-          justify-content: center;">
-            <img src="https://avatars0.githubusercontent.com/u/27324463?s=460&v=4" alt="charlie_profile_pic"
-              style="max-width: 50%;min-width: 200px;min-height: 200px; width: 200px; height: 200px;">
-          </div>
-        </div>
-      </div>
-      <hr class="my-4">
-      <p style="
-      outline: 5px solid grey;
-      background-color:#717B80;
-      padding-left: 1vh;
-      font-size: 1.1em;
-  ">Developer. I love going to hackathons + conferences to learn
-        new tech! Recently got into cryptokitties and I've been addicted to
-        getting fake internet cats! Check out my kitties
-        <a href="https://www.cryptokitties.co/profile/0xaa2d54981081d5b7348ea9a4c765468caa23e52e" target="_blank"
-          style="color: #fcffaa">
-          here!</a></p> -->
   </div>
 
   <!-- Portfolio -->
-  <div class="portfolio wow zoomInRight" data-wow-delay=".8s"" style=" background-color: #fbfbff; border-radius: .3rem;
+  <div class="portfolio wow zoomInRight" data-wow-delay=".8s" id="portfolio" style=" background-color: #fbfbff;
     color: #0c120c;">
     <h1 style="text-align: center; padding-top: 200px;"> PORTFOLIO </h1>
     <div class="container">
@@ -297,7 +267,6 @@
               class="githubButton btn btn-default " type="button">Github</button></a>
         </div>
       </div>
-      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     </div>
   </div>
 
