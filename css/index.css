@@ -28,7 +28,7 @@ div {
 }
 
 .textDesc {
-    color: #6d7275;
+    color: #0c120c;
 }
 
   .githubButton {
@@ -149,5 +149,8 @@ div {
 	text-decoration: none;
   }
 
-  
+/* Contact Form */
 
+label, input {
+    display: block;
+}

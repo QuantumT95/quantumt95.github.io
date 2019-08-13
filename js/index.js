@@ -1,46 +1,50 @@
 new WOW().init();
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () { scrollFunction() };
-
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn").style.display = "block";
-    } else {
-        document.getElementById("myBtn").style.display = "none";
-    }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
-
-$(function () {
-    var url = window.location.href;
-    var activePage = url;
-    $('#nav_bar a').each(function () {
-        var linkPage = this.href;
-
-        if (activePage == linkPage) {
-            $(this).closest("li").addClass("active");
-        }
-    });
-});
-
 $(document).ready(function () {
 
     $(window).scroll(function () {
         //if you hard code, then use console
         //.log to determine when you want the 
         //nav bar to stick.  
-        console.log($(window).scrollTop())
-        if ($(window).scrollTop() > 280) {
+        // console.log($(window).scrollTop());
+        if ($(window).scrollTop() > 700) {
             $('#nav_bar').addClass('navbar-fixed');
         }
-        if ($(window).scrollTop() < 281) {
+        if ($(window).scrollTop() < 701) {
             $('#nav_bar').removeClass('navbar-fixed');
         }
     });
+
+    $('.submit').click(function (event) {
+        event.preventDefault();
+        console.log("clicked button");
+
+        var email = $('.email').val();
+        var subject = $('.subject').val();
+        var message = $('.message').val();
+        var statusElm = $('.status');
+        statusElm.empty();
+
+        if (email.length > 5 && email.includes('@') && email.includes('.')) {
+            statusElm.append("<div>email is valid</div>");
+        } else {
+            statusElm.append("<div>email isn't valid</div>");
+        }
+
+        if (subject.length > 2) {
+            statusElm.append("<div>subject is valid</div>");
+        } else {
+            statusElm.append("<div>subject isn't valid</div>");
+        }
+
+        if (message.length > 20) {
+            statusElm.append("<div>message isn't valid</div>");
+        } else {
+            statusElm.append("<div>message isn't valid</div>");
+        }
+
+        console.log(email);
+        console.log(subject);
+        console.log(message);
+    })
 });
