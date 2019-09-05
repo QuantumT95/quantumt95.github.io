@@ -42,8 +42,11 @@
   <!-- nav bar  -->
 
   <nav id='nav_bar'>
-    <ul class='nav_links'>
-      <li><a href="#home">Home</a></li>
+    <ul class='nav_links' style="
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 0px;">
+      <li><a href=" #home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
     </ul>
@@ -94,7 +97,7 @@
         <div class="row" style="display: flex; justify-content: space-evenly;">
           <div class="card mb-3" style="max-width: 540px;">
             <div class="row no-gutters">
-              <div class="col-md-4">
+              <div class="col-md-4" id="profile_card">
                 <img src="https://avatars0.githubusercontent.com/u/27324463?s=460&v=4" alt="charlie_profile_pic"
                   style="max-width: 50%;min-width: 200px;min-height: 200px; width: 200px; height: 200px;">
               </div>
@@ -299,7 +302,24 @@
         bgColor: "#6d7275",
         spinner: "spinner1"
       });
+
+      $(".carousel").on("touchstart", function (event) {
+        var xClick = event.originalEvent.touches[0].pageX;
+        $(this).one("touchmove", function (event) {
+          var xMove = event.originalEvent.touches[0].pageX;
+          if (Math.floor(xClick - xMove) > 5) {
+            $(this).carousel('next');
+          }
+          else if (Math.floor(xClick - xMove) < -5) {
+            $(this).carousel('prev');
+          }
+        });
+        $(".carousel").on("touchend", function () {
+          $(this).off("touchmove");
+        });
+      });
     });
+
   </script>
   <div class="fakeLoader"></div>
   <script src="js/wow.min.js"></script>
