@@ -9,7 +9,6 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
   <link rel="stylesheet" href="css/all.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/fakeLoader.min.css">
@@ -28,7 +27,7 @@
   <div id='stars3'></div> -->
 
   <div class="container" id="home"
-    style="height: calc(100vh + 53px);color: #fbfbff;text-align: center;display: flex;flex-direction: column;justify-content: center;align-items: center;">
+    style="height: calc(100vh + 53px);color: #0c120c;text-align: center;display: flex;flex-direction: column;justify-content: center;align-items: center;">
     <div class="jumbotron wow bounceInDown" data-wow-delay="1.2s"" style=" background-color: transparent; display: flex;
       flex-direction: column; justify-content: center; align-items: center;">
       <h1> Hello. I'm <mark style="background-color:transparent; color:	#b80c09;"> Charlie Tran </mark></h1>
@@ -55,45 +54,43 @@
   <div class="fluid-container">
     <!--About Me-->
     <div class="jumbotron wow bounceInLeft" data-wow-delay="1.2s" id="about"
-      style=" background-color: #fbfbff; height: 101vh;
-      display: flex;flex-direction: column;justify-content: space-evenly; color: #0c120c; margin-bottom: 0px; border-radius: 0 !important;">
+      style=" background-color: #fbfbff; height: 101vh; color: #0c120c; margin-bottom: 0px; border-radius: 0 !important;">
       <div class="container">
         <!-- Cards -->
-        <div class="row" style="display: flex; justify-content: space-evenly;">
-          <!-- Card 1 -->
-          <div>
-            <div class="card cardSkills text-center">
+        <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
               <i class="far fa-window-restore fa-5x" style="
-              padding-top: 3.5vh;
-          "></i>
-              <div class="card-body">
-                <h5 class="card-title textDesc">Web Development</h5>
-              </div>
+                    padding-top: 3.5vh; display: flex; justify-content: center;
+                "></i>
+              <h5 class="card-title textDesc" style="text-align: center; padding-top: 3.5vh">Web Development</h5>
             </div>
-          </div>
-          <!-- Card 2 -->
-          <div>
-            <div class="card cardSkills text-center">
+            <div class="carousel-item">
               <i class="fas fa-envelope fa-5x" style="
-                padding-top: 3.5vh;
-            "></i>
-              <div class="card-body">
-                <h5 class="card-title textDesc">Email Development</h5>
-              </div>
+                      padding-top: 3.5vh; display: flex; justify-content: center;
+                  "></i>
+              <h5 class="card-title textDesc" style="text-align: center; padding-top: 3.5vh">Email Development</h5>
             </div>
-          </div>
-          <!-- Card 3 -->
-          <div>
-            <div class="card cardSkills text-center">
+            <div class="carousel-item">
               <i class="fas fa-mobile-alt fa-5x" style="
-              padding-top: 3.5vh;
-          "></i>
-              <div class="card-body">
-                <h5 class="card-title textDesc">iOS Development</h5>
-              </div>
+                    padding-top: 3.5vh; display: flex; justify-content: center;
+                "></i>
+              <h5 class="card-title textDesc" style="text-align: center; padding-top: 3.5vh">iOS Development</h5>
             </div>
           </div>
+          <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
+
+
+
+
         <hr class="my-4">
         <div class="row" style="display: flex; justify-content: space-evenly;">
           <div class="card mb-3" style="max-width: 540px;">
@@ -142,22 +139,22 @@
     <h1 style="text-align: center; padding-top: 200px;"> PORTFOLIO </h1>
     <div class="container">
       <div class="row portfolio-row wow zoomInLeft" data-wow-delay=".8s""">
+        <!-- image -->
         <div class="col-md-6 phone col-md-push-6">
-          <!-- image -->
+          <h1> <img src="./images/medi.gif" alt="" style="max-width: 100%"> </h1>
+        </div>
+        <div class="col-md-6 phone col-md-push-6">
           <h2>World-Med</h2>
           <p class="textDesc"> Was at a tech event in Vietnam and made this to showcase a medical tourism service
             website.</p>
           <h3> My Role </h3>
-          <p class="textDesc"> Sole Web Developer </p>
+          <p class="textDesc"> Web Developer </p>
           <h3> Technologies </h3>
           <p class="textDesc"> HTML, CSS, jQuery, JS, Gulp</p>
           <a href="https://github.com/QuantumT95/medi-world" target="_blank"><button
               class="githubButton btn btn-default " type="button">Github</button></a>
           <a href="https://aqueous-castle-75527.herokuapp.com/" target="_blank"><button
               class="githubButton btn btn-default " type="button">Website</button></a>
-        </div>
-        <div class="col-md-6 phone col-md-push-6">
-          <h1> <img src="./images/medi.gif" alt="" style="max-width: 100%"> </h1>
         </div>
       </div>
       <div class="row portfolio-row wow zoomInRight" data-wow-delay=".8s""">
@@ -182,8 +179,11 @@
         </div>
       </div>
       <div class="row portfolio-row wow zoomInLeft" data-wow-delay=".8s""">
+        <!-- image -->
         <div class="col-md-6 phone col-md-push-6">
-          <!-- image -->
+          <h1> <img src="./images/BFLifeCounter.gif" alt="" style="max-width: 100%"> </h1>
+        </div>
+        <div class="col-md-6 phone col-md-push-6">
           <h2>BF Life Counter</h2>
           <p class="textDesc"> I created this app to help track life between BuddyFight players. The "Life Counter"
             is
@@ -195,9 +195,6 @@
           <p class="textDesc"> Sole iOS Developer </p>
           <h3> Technologies </h3>
           <p class="textDesc"> Swift, UIKit</p>
-        </div>
-        <div class="col-md-6 phone col-md-push-6">
-          <h1> <img src="./images/BFLifeCounter.gif" alt="" style="max-width: 100%"> </h1>
         </div>
       </div>
       <div class="row portfolio-row wow rollIn" data-wow-delay=".8s""">
@@ -217,10 +214,10 @@
               class="githubButton btn btn-default " type="button">Github</button></a>
         </div>
       </div>
-      <div class="row portfolio-row wow rollIn" data-wow-delay=".8s""">
-        <div class="col-md-6 phone col-md-push-6">
-          <!-- image -->
-          <h2> Subtle Asian Tradition </h2>
+      <!-- <div class="row portfolio-row wow rollIn" data-wow-delay=".8s""">
+        <div class="col-md-6 phone col-md-push-6"> -->
+      <!-- image -->
+      <!-- <h2> Subtle Asian Tradition </h2>
           <p class="textDesc"> Social media exclusive for a popular facebook meme/lifestyle/dating group. </p>
           <h3> My Role </h3>
           <p class="textDesc"> Full-stack Developer. Focus was on building an mvp with a framework I wasn't familiar
@@ -234,28 +231,28 @@
         <div class="col-md-6 phone col-md-push-6">
           <h1> <img src="./images/SAT_proto.png" alt="" style="max-width: 100%"> </h1>
         </div>
-      </div>
+      </div> -->
       <div class="row portfolio-row wow bounceInRight" data-wow-delay=".8s""">
         <div class="col-md-6 phone col-md-push-6 syt">
           <h1> <img src="./images/SYT.gif" alt="" style="max-width: 100%"> </h1>
         </div>
-        <div class="col-md-6 phone col-md-push-6">
-          <h2> See You There </h2>
-          <p class="textDesc"> I made this application to help me meet up with friends halfway. See You There uses
-            Google
-            Maps api to
-            get the midpoint between two locations then takes the midpoint to find popular restaurants within that
-            area. </p>
-          <h3> My Role </h3>
-          <p class="textDesc"> Built the majority of the application. Focus was on building API calls and logic.
-          </p>
-          <h3> Technologies </h3>
-          <p class="textDesc"> HTML, CSS, Materialize, JavaScript, jQuery</p>
-          <a href="https://github.com/QuantumT95/SeeYouThereV2" target="_blank"><button
-              class="githubButton btn btn-default " type="button">Github</button></a>
-        </div>
+        <div class="col-md-6 phone col-md-push-6"></div>
+        <h2> See You There </h2>
+        <p class="textDesc"> I made this application to help me meet up with friends halfway. See You There uses
+          Google
+          Maps api to
+          get the midpoint between two locations then takes the midpoint to find popular restaurants within that
+          area. </p>
+        <h3> My Role </h3>
+        <p class="textDesc"> Built the majority of the application. Focus was on building API calls and logic.
+        </p>
+        <h3> Technologies </h3>
+        <p class="textDesc"> HTML, CSS, Materialize, JavaScript, jQuery</p>
+        <a href="https://github.com/QuantumT95/SeeYouThereV2" target="_blank"><button
+            class="githubButton btn btn-default " type="button">Github</button></a>
       </div>
     </div>
+  </div>
   </div>
 
   <!-- Contact -->
@@ -300,7 +297,7 @@
     $(document).ready(function () {
       $.fakeLoader({
         timeToHide: 1200,
-        bgColor: "#0c120c",
+        bgColor: "#3c6478",
         spinner: "spinner4"
       });
     });

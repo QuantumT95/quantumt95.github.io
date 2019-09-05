@@ -2,6 +2,7 @@ new WOW().init();
 
 $(document).ready(function () {
 
+    // Navbar sticky when user scrolls past it
     $(window).scroll(function () {
         //if you hard code, then use console
         //.log to determine when you want the 
@@ -15,6 +16,7 @@ $(document).ready(function () {
         }
     });
 
+    // Contact form
     $('.submit').click(function (event) {
         event.preventDefault();
         console.log("clicked button");
@@ -46,5 +48,8 @@ $(document).ready(function () {
         console.log(email);
         console.log(subject);
         console.log(message);
-    })
+    });
+
+    // Initialize carousel
+    $('.carousel').carousel();
 });
